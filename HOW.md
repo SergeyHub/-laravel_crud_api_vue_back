@@ -67,7 +67,23 @@ DB_PASSWORD=123456
 `npm -v`  
 `php -v`
 
-#### ContactController Contact Model Table & api route
+#### 2. ContactController Contact Model Table & api route
 `php artisan make:controller ContactController`    
 `php artisan make:model Contact -m`    
 `php artisan migrate`  
+
+#### 3. Table Contact : Seeding
+`php artisan make:factory ContactFactory`  
+```
+return [
+    'name' => $this->faker->title(15),
+    'email' => $this->faker->email,
+    'destignation' => $this->faker->text(25),
+    'contact_no' => $this->faker->text(15),
+];
+```
+`php artisan make:seeder ContactSeeder`  
+```
+Contact::factory()->count(25)->create();
+```
+`php artisan db:seed --class=ContactSeeder`  
