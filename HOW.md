@@ -67,4 +67,7 @@ DB_PASSWORD=123456
 `npm -v`  
 `php -v`
 
-
+#### ContactController Contact Model Table & api route
+`php artisan make:controller ContactController`    
+`php artisan make:model Contact -m`    
+`php artisan migrate`  
