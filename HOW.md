@@ -87,3 +87,30 @@ return [
 Contact::factory()->count(25)->create();
 ```
 `php artisan db:seed --class=ContactSeeder`  
+
+![Screenshot](readme/api-contact.JPG) 
+
+#### ContactController saveContact Method  
+Create the POST API to insert data in database.   
+Test  POST API with postman  
+
+```
+        $contact = new Contact();
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->destignation = $request->destignation;
+        $contact->contact_no = $request->contact_no;
+
+        $contact->save();
+        return response()->json([
+            'message' => 'Contact Created Successfully',
+            'code' => 200
+
+        ]);
+```
+```
+Route::get('contacts', [ContactController::class, 'contacts']);
+Route::post('save_contact', [ContactController::class, 'saveContact']);
+```
+![Screenshot](readme/post_save_contact.JPG) 
+

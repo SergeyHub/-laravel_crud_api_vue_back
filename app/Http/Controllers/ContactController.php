@@ -18,4 +18,20 @@ class ContactController extends Controller
            ]
         );
     }
+
+    public function saveContact(Request $request){
+
+        $contact = new Contact();
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->destignation = $request->destignation;
+        $contact->contact_no = $request->contact_no;
+
+        $contact->save();
+        return response()->json([
+            'message' => 'Contact Created Successfully',
+            'code' => 200
+
+        ]);
+    }
 }
