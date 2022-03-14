@@ -114,3 +114,5 @@ Route::post('save_contact', [ContactController::class, 'saveContact']);
 ```
 ![Screenshot](readme/post_save_contact.JPG) 
 
+#### ContactController deleteContact Method  
+

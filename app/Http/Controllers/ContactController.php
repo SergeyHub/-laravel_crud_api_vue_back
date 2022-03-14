@@ -19,12 +19,12 @@ class ContactController extends Controller
         );
     }
 
-    public function saveContact(Request $request){
+    public function addContact(Request $request){
 
         $contact = new Contact();
         $contact->name = $request->name;
         $contact->email = $request->email;
-        $contact->destignation = $request->destignation;
+        $contact->designation = $request->designation;
         $contact->contact_no = $request->contact_no;
 
         $contact->save();
@@ -34,4 +34,20 @@ class ContactController extends Controller
 
         ]);
     }
+
+    public  function deleteContact($id){
+       $contact = Contact::find($id);
+       if($contact) {
+           $contact->softdelete();
+           return response()->json([
+               'message' => 'Contact Deleted Successfully',
+               'code' => 200
+           ]);
+       } else {
+           return response()->json([
+               'message' => "Contact with id:$id does not exists"
+           ]);
+       }
+    }
+
 }
