@@ -116,3 +116,8 @@ Route::post('save_contact', [ContactController::class, 'saveContact']);
 
 #### ContactController deleteContact Method  
 #### Staff Controller Model Table
+
+#### npm install vue@next vue-router@next vue-loader@next
+`npm install vue@next`  
+`npm install vue-router@next`  
+`npm install vue-loader@next`  
