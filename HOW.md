@@ -121,6 +121,16 @@ Route::post('save_contact', [ContactController::class, 'saveContact']);
 `npm install vue@next`  
 `npm install vue-router@next`  
 `npm install vue-loader@next`  
+**webpack**
+add .vue()
+```
+mix.js('resources/js/app.js', 'public/js').vue().postCss('resources/css/app.css',
+    'public/css', [
+    require('postcss-import'),
+    require('tailwindcss'),
+    require('autoprefixer'),
+]);
+```
 
 #### composer require laravel/breeze php artisan breeze:install
 `composer require laravel/breeze`   
@@ -139,3 +149,5 @@ Route::post('save_contact', [ContactController::class, 'saveContact']);
 `php artisan make:factory CompanyFactory`  
 `php artisan make:seeder CompanySeeder`  
 `php artisan db:seed`  
+#### Test Api Postman
+![Screenshot](readme/api-compnies.JPG) 

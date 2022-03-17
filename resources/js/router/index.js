@@ -1,13 +1,13 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import CompaniesIndex from '../components/CompaniesIndex'
+import List from '../components/companies/List'
 
 
 const routes = [
     {
-        path: '/',
-        name: 'companies.index',
-        component: CompaniesIndex
+        path: '/dashboard',
+        name: 'companies.list',
+        component: List
     },
 ]
 
