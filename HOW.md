@@ -135,3 +135,7 @@ Route::post('save_contact', [ContactController::class, 'saveContact']);
 `php artisan make:resource CompanyResource`  
 `php artisan make:request CompanyRequest`  
 #### Company Controller Resource Request php artisan migrate
+#### Table Company Seeding
+`php artisan make:factory CompanyFactory`  
+`php artisan make:seeder CompanySeeder`  
+`php artisan db:seed`  
