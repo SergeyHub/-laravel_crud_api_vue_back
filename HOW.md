@@ -121,3 +121,8 @@ Route::post('save_contact', [ContactController::class, 'saveContact']);
 `npm install vue@next`  
 `npm install vue-router@next`  
 `npm install vue-loader@next`  
+
+#### composer require laravel/breeze php artisan breeze:install
+`composer require laravel/breeze`   
+`php artisan breeze:install`  
+`php artisan migrate --seed`
