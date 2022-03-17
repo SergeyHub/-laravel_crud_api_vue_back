@@ -126,3 +126,7 @@ Route::post('save_contact', [ContactController::class, 'saveContact']);
 `composer require laravel/breeze`   
 `php artisan breeze:install`  
 `php artisan migrate --seed`
+
+#### php artisan make:model Company -m php artisan make:controller Api/CompanyController --api --resource --model=Company
+`php artisan make:model Company -m`  
+`php artisan make:controller Api/CompanyController --api --resource --model=Company`  
