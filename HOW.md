@@ -130,3 +130,8 @@ Route::post('save_contact', [ContactController::class, 'saveContact']);
 #### php artisan make:model Company -m php artisan make:controller Api/CompanyController --api --resource --model=Company
 `php artisan make:model Company -m`  
 `php artisan make:controller Api/CompanyController --api --resource --model=Company`  
+
+#### php artisan make:resource CompanyResource php artisan make:request CompanyRequest
+`php artisan make:resource CompanyResource`  
+`php artisan make:request CompanyRequest`  
+#### Company Controller Resource Request php artisan migrate
